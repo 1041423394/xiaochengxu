@@ -1,0 +1,17 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <image wx:if="{{ img }}" class="background" src="{{ img }}" mode="aspectFill"/>
+  <block wx:if="{{ name }}">
+    <view class="meta">
+      <image class="poster" src="{{ img }}" mode="aspectFit"/>
+      <text class="title">{{ name }}({{ releaseDate }})</text>
+      <text class="info">评分：{{ average }}</text>
+      <text class="info">导演：> {{ director }}></text>
+      <text class="info">主演：<block wx:for="{{ actors }}" wx:key="id"> {{ item.name }} </block></text>
+    </view>
+    <view class="summary">
+      <text class="label">摘要：</text>
+      <text class="content">{{ story }}</text>
+    </view>
+  </block>
+</view>

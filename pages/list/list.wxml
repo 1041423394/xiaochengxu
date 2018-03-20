@@ -1,0 +1,22 @@
+<!--pages/list/list.wxml-->
+<view class='container'>
+    
+        <block wx:for="{{movies}}" wx:key="item.index">
+        <view class='info'>
+        <navigator url='../detail/detail?locationId=829&id={{ item.movieId || item.id }}'>
+            <view class='movie-img'>
+                <image src='{{item.img || item.image}}' /> 
+            </view>
+        </navigator>
+            <view class='movie-info'>
+                <text>电影: {{item.titleCn || item.title || item.t}}</text>
+                <text>类型: {{item.type || item.movieType}}</text>
+                <text>导演: {{item.directorName || item.director || item.dN}}</text>
+                <text>主演: {{item.actors}}</text>
+                <text>年份: {{item.rYear || item.year}}</text>
+                <text>评分: {{item.ratingFinal || item.r}}</text>
+            </view>
+        </view>
+        </block>
+    
+</view>

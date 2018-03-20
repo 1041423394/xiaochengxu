@@ -1,0 +1,80 @@
+<!--pages/myindex/myindex.wxml-->
+<view class="container">
+    <view class='swiperbox'>
+        <swiper class='swiper-box' circular="{{circular}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{imgUrls}}" wx:key="item.index">
+                <swiper-item>
+                    <image src="{{item}}" class="slide-image" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <view>
+        <view class="title">
+        <navigator url="../list/list?type={{type}}?locationId=829">
+            <text>正在热映</text>
+        </navigator>
+            
+        </view>
+        <view class='scrollbox'>
+            <scroll-view scroll-x="true" class=''>
+                <view class="inner">
+                    <block wx:for="{{ movies }}" wx:key="item.index">
+                        <navigator url="../detail/detail?locationId=829&id={{ item.movieId }}">
+                            <view class="movie-item">
+                                <image src="{{ item.img}}" class='imgs' mode="aspectFill" />
+                                <text class='txt-title'>{{ item.titleCn }}</text>
+                            </view>
+                        </navigator>
+                    </block>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+
+    <view>
+        <view class="title">
+        <navigator url="../list/list?type={{type1}}?locationId=829">
+            <text>即将上映</text>
+        </navigator>
+            
+        </view>
+        <view class='scrollbox'>
+            <scroll-view scroll-x="true" class=''>
+                <view class="inner">
+                    <block wx:for="{{ comingmovies }}" wx:key="item.index">
+                        <navigator url="../detail/detail?locationId=829&id={{ item.id }}">
+                            <view class="movie-item">
+                                <image src="{{ item.image}}" class='imgs' mode="aspectFill" />
+                                <text class='txt-title'>{{ item.title }}</text>
+                            </view>
+                        </navigator>
+                    </block>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+
+    <view>
+        <view class="title">
+        <navigator url="../list/list?type={{type2}}?locationId=829">
+            <text>在线影院</text>
+        </navigator>
+            
+        </view>
+        <view class="online">
+            <block wx:for="{{ onlinemovies }}" wx:key="item.index">
+                <navigator url="../detail/detail?locationId=829&id={{ item.id }}">
+                    <view class="movie-item">
+                        <image src="{{ item.img}}" class='imgs' mode="aspectFill" />
+                        <text class='txt-title'>{{ item.t }}</text>
+                    </view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+    <loading hidden="{{loadingHidden}}">
+        加载中...
+    </loading>
+</view>

@@ -1,0 +1,76 @@
+/* pages/myindex/myindex.wxss */
+.page{
+  /* height: 100%; */
+}
+.container{
+  padding: 0;
+  /* height: 100%; */
+}
+ .swiperbox{
+   padding: 0;
+   /* height: 400px;  */
+   width: 100%;   
+}
+.swiper-box{
+  height: 400px;
+  /* width: 270px; */ 
+}
+.slide-image{
+  height: 100%;
+  width: 100%;
+}
+.title{
+  padding: 5px 20px;
+  margin-top: 10px; 
+  text-align: left;
+  border: 1px solid #ededed;
+  background: #ededed;
+}
+.scrollbox {
+    margin-top: 10px;
+    display: flex;
+    /* justify-content: space-around; */
+    /* border: 1px solid red; */
+}
+.inner{ 
+   padding: 0px 5px; 
+   display: flex; 
+   flex-direction: row;
+   /* justify-content: space-around;  */
+  /* width: 900px; */
+  /* flex-wrap: wrap; */
+}
+ .imgs{ 
+  width: 100px;
+  height: 120px;
+  display: block;
+}
+ .txt-title{
+  font-size: 11px; 
+  /* line-height: 40px; */
+  
+}
+.online {
+     display: flex; 
+     justify-content: space-around; 
+     flex-wrap: wrap; 
+}
+.online .movie-item {
+    /* float: left; */
+    width: 130px;
+    height: 180px;
+    margin-top: 15px;
+}
+.online .imgs{
+    width: 100%;
+    height: 155px;
+}
+.movie-item{
+  
+  margin: 0 2px;
+  width: 100px;
+  height: 140px;
+  border: 1px solid #ededed;
+  text-align: center;
+  /* overflow: hidden; */
+}
